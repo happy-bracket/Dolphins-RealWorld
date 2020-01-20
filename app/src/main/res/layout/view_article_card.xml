@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/view_article_author_avatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/view_article_author_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@+id/view_article_creation_date"
+        app:layout_constraintStart_toEndOf="@id/view_article_author_avatar"
+        app:layout_constraintTop_toTopOf="@id/view_article_author_avatar" />
+
+    <TextView
+        android:id="@+id/view_article_creation_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="13.03.2019"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toBottomOf="@id/view_article_author_avatar"
+        app:layout_constraintStart_toEndOf="@id/view_article_author_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/view_article_author_name" />
+
+    <TextView
+        android:id="@+id/view_article_title"
+        app:layout_constraintTop_toBottomOf="@id/view_article_author_avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Huy Jopa Govno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/view_article_teaser"
+        app:layout_constraintTop_toBottomOf="@id/view_article_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="If huy jopa govno? Maybe pizda? Let's find out!"
+        android:gravity="start"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/view_article_open_cut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_article_teaser"
+        android:text="Read more..."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
