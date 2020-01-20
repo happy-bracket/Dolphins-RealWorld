@@ -4,6 +4,9 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import androidx.cardview.widget.CardView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.Transformation
+import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import kotlinx.android.synthetic.main.view_article_card.view.*
 import ru.hbracket.realworld.R
 import ru.hbracket.realworld.models.Article
@@ -21,7 +24,10 @@ class ArticleCardView
     }
 
     fun bind(article: Article) {
-        // TODO: glide
+        Glide.with(context)
+            .load(article.author.avatar.toURI())
+            .transform(CircleCrop())
+            .into(view_article_author_avatar)
         view_article_author_name.text = article.author.username
         view_article_creation_date.text = article.createdAt
         view_article_title.text = article.title
