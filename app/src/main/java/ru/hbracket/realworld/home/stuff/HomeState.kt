@@ -10,7 +10,7 @@ data class HomeState(
     val authPromptVisible: Boolean = false
 )
 
-sealed class HomeEvent<M> {
+sealed class HomeEvent<out M> {
 
     data class LikeClicked(val articleSlug: String) : HomeEvent<Nothing>()
     data class MutationWrapper<M>(val mutation: M) : HomeEvent<M>()

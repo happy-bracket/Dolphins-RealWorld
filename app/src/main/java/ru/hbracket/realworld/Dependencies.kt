@@ -9,7 +9,7 @@ import ru.hbracket.realworld.services.network.ConduitApi
 
 object Dependencies {
 
-    val api: ConduitApi =
+    val Api: ConduitApi =
         Retrofit.Builder()
             .baseUrl("https://conduit.productionready.io/")
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())

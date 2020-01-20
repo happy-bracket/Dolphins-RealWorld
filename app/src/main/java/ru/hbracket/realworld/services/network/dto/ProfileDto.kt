@@ -8,7 +8,7 @@ data class ProfileDto(
     @SerializedName("bio")
     val bio: String,
     @SerializedName("image")
-    val image: String,
+    val image: String?,
     @SerializedName("following")
     val following: Boolean
 )

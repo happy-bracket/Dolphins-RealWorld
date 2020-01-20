@@ -9,6 +9,8 @@ data class ArticleDto(
     val title: String,
     @SerializedName("description")
     val description: String,
+    @SerializedName("body")
+    val body: String,
     @SerializedName("tagList")
     val tags: List<String>,
     @SerializedName("createdAt")
